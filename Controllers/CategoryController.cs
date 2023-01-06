@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using AutoMapper;
 using Dws.Note_one.Api.Domain.Models;
 using Dws.Note_one.Api.Resource;
@@ -10,12 +11,13 @@ using Dws.Note_one.Api.Extension;
 namespace Dws.Note_one.Api.Controllers
 {
     [Route("/api/[controller]")]
-    public class CategoriesController : Controller
+    [ApiController]
+    public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
         private readonly IMapper _mapper;
 
-        public CategoriesController(ICategoryService categoryService, IMapper mapper)
+        public CategoryController(ICategoryService categoryService, IMapper mapper)
         {
             _categoryService = categoryService;
             _mapper = mapper;
