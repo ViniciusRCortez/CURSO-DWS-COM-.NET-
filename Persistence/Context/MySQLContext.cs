@@ -4,10 +4,10 @@ using Dws.Note_one.Api.Domain.Helpers;
 
 namespace Dws.Note_one.Api.Persistence.Context
 {
-    public class MySQLContext : DbContext
+    public class AppDbContext : DbContext
     {
-        public MySQLContext() { }
-        public MySQLContext(DbContextOptions<MySQLContext> options) : base(options) { }
+        public AppDbContext() { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }

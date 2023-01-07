@@ -2,34 +2,30 @@
 using Dws.Note_one.Api.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
 namespace note_one_api.Migrations
 {
-    [DbContext(typeof(MySQLContext))]
-    [Migration("20230107134114_InitialWithSeedBase")]
-    partial class InitialWithSeedBase
+    [DbContext(typeof(AppDbContext))]
+    partial class AppDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.9")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+            modelBuilder.HasAnnotation("ProductVersion", "6.0.9");
 
             modelBuilder.Entity("Dws.Note_one.Api.Domain.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(30)
-                        .HasColumnType("varchar(30)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -52,27 +48,53 @@ namespace note_one_api.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("CategoryId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("TEXT");
 
                     b.Property<short>("QuantityInPackage")
-                        .HasColumnType("smallint");
+                        .HasColumnType("INTEGER");
 
                     b.Property<byte>("UnitOfMeasurement")
-                        .HasColumnType("tinyint unsigned");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryId = 101,
+                            Name = "Milk",
+                            QuantityInPackage = (short)10,
+                            UnitOfMeasurement = (byte)5
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 100,
+                            Name = "Apple",
+                            QuantityInPackage = (short)1,
+                            UnitOfMeasurement = (byte)4
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 100,
+                            Name = "Onion",
+                            QuantityInPackage = (short)20,
+                            UnitOfMeasurement = (byte)4
+                        });
                 });
 
             modelBuilder.Entity("Dws.Note_one.Api.Domain.Models.Product", b =>

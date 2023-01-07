@@ -7,7 +7,7 @@ namespace Dws.Note_one.Api.Persistence.Repositories
 {
     public class ProductRepository : BaseRepository, IProductRepository
     {
-        public ProductRepository(MySQLContext context) : base(context)
+        public ProductRepository(AppDbContext context) : base(context)
         {
         }
 

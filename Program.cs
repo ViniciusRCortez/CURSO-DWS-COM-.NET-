@@ -19,9 +19,8 @@ internal class Program
 
         builder.Services.AddControllers();
 
-        var connection = builder.Configuration["MySQLConnection:MySQLConnectionString"];
-        builder.Services.AddDbContext<MySQLContext>(options => options
-            .UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 31))));
+        var connection = builder.Configuration.GetConnectionString("LocalDb");
+        builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(connection));
 
         builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
         builder.Services.AddScoped<ICategoryService, CategoryService>();
@@ -41,7 +40,7 @@ internal class Program
         var app = builder.Build();
 
         var scope = app.Services.CreateScope();
-        using (var context = scope.ServiceProvider.GetService<MySQLContext>())
+        using (var context = scope.ServiceProvider.GetService<AppDbContext>())
         {
             context.Database.EnsureCreated();
         }

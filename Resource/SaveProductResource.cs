@@ -14,5 +14,8 @@ namespace Dws.Note_one.Api.Resource
 
         [Required]
         public EUnitOfMeasurement UnitOfMeasurement { get; set; }
+
+        [Required]
+        public int CategoryId { get; set; }
     }
 }
