@@ -5,9 +5,9 @@ namespace Dws.Note_one.Api.Persistence.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly AppDbContext _context;
+        private readonly MySQLContext _context;
 
-        public UnitOfWork(AppDbContext context)
+        public UnitOfWork(MySQLContext context)
         {
             _context = context;     
         }

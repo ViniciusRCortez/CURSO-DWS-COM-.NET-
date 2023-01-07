@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 
 namespace Dws.Note_one.Api.Domain.Models
 {
-
     public class Category
     {
         public int Id { get; set; }
@@ -13,7 +12,6 @@ namespace Dws.Note_one.Api.Domain.Models
         public string Name { get; set; }
 
         public IList<Product> Products { get; set; } = new List<Product>();
-
 
     }
 

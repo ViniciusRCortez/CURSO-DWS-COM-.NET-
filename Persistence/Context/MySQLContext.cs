@@ -3,12 +3,13 @@ using Dws.Note_one.Api.Domain.Models;
 
 namespace Dws.Note_one.Api.Persistence.Context
 {
-     public class AppDbContext : DbContext
+    public class MySQLContext : DbContext
     {
+        public MySQLContext() { }
+        public MySQLContext(DbContextOptions<MySQLContext> options) : base(options) { }
+
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
-
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -22,7 +23,7 @@ namespace Dws.Note_one.Api.Persistence.Context
 
             builder.Entity<Category>().HasData
             (
-                new Category { Id = 100, Name = "Fruits and Vegetables" }, // Id set manually due to in-memory provider
+                new Category { Id = 100, Name = "Fruits and Vegetables" },
                 new Category { Id = 101, Name = "Dairy" }
             );
 
@@ -34,5 +35,4 @@ namespace Dws.Note_one.Api.Persistence.Context
             builder.Entity<Product>().Property(p => p.UnitOfMeasurement).IsRequired();
         }
     }
-
 }

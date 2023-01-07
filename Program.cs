@@ -19,10 +19,10 @@ internal class Program
 
         builder.Services.AddControllers();
 
-        builder.Services.AddDbContext<AppDbContext>(options =>
-        {
-            options.UseInMemoryDatabase("groceries-api-in-memory");
-        });
+        var connection = builder.Configuration["MySQLConnection:MySQLConnectionString"];
+        builder.Services.AddDbContext<MySQLContext>(options => options
+            .UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 31))));
+
         builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
         builder.Services.AddScoped<ICategoryService, CategoryService>();
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -37,7 +37,7 @@ internal class Program
         var app = builder.Build();
 
         var scope = app.Services.CreateScope();
-        using (var context = scope.ServiceProvider.GetService<AppDbContext>())
+        using (var context = scope.ServiceProvider.GetService<MySQLContext>())
         {
             context.Database.EnsureCreated();
         }

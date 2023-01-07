@@ -7,7 +7,7 @@ namespace Dws.Note_one.Api.Persistence.Repositories
 {
     public class CategoryRepository : BaseRepository, ICategoryRepository
     {
-        public CategoryRepository(AppDbContext context) : base(context)
+        public CategoryRepository(MySQLContext context) : base(context)
         {
         }
 

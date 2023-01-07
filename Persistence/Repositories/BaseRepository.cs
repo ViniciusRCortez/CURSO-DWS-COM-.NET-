@@ -4,9 +4,9 @@ namespace Dws.Note_one.Api.Persistence.Repositories
 {
     public abstract class BaseRepository
     {
-        protected readonly AppDbContext _context;
+        protected readonly MySQLContext _context;
 
-        public BaseRepository(AppDbContext context)
+        public BaseRepository(MySQLContext context)
         {
             _context = context;
         }
