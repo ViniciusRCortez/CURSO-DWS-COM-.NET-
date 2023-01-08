@@ -30,6 +30,7 @@ namespace Dws.Note_one.Api.Persistence.Context
             builder.Entity<Product>().Property(p => p.Name).IsRequired().HasMaxLength(50);
             builder.Entity<Product>().Property(p => p.QuantityInPackage).IsRequired();
             builder.Entity<Product>().Property(p => p.UnitOfMeasurement).IsRequired();
+            builder.Entity<Product>().Property(p => p.CategoryId).IsRequired();
 
             //Popular Categories
             builder.Entity<Category>().HasData

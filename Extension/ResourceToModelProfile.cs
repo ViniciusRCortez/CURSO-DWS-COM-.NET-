@@ -10,6 +10,7 @@ namespace Dws.Note_one.Api.Extension
         public ResourceToModelProfile()
         {
             CreateMap<SaveCategoryResource, Category>();
+            CreateMap<SaveProductResource, Product>();
         }
     }
 
