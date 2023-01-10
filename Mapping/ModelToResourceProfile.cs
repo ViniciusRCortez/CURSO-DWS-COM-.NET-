@@ -10,6 +10,7 @@ namespace Dws.Note_one.Api.Mapping
         {
             CreateMap<Category, CategoryResource>();
             CreateMap<Product, ProductResource>();
+            CreateMap<User, UserResource>();
         }
     }
 }

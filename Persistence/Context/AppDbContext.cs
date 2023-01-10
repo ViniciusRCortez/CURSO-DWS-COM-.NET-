@@ -11,6 +11,7 @@ namespace Dws.Note_one.Api.Persistence.Context
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -32,6 +33,14 @@ namespace Dws.Note_one.Api.Persistence.Context
             builder.Entity<Product>().Property(p => p.UnitOfMeasurement).IsRequired();
             builder.Entity<Product>().Property(p => p.CategoryId).IsRequired();
 
+            //Tabela Users
+            builder.Entity<User>().ToTable("Users");
+            builder.Entity<User>().HasKey(p => p.Id);
+            builder.Entity<User>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<User>().Property(p => p.Login).IsRequired().HasMaxLength(50);
+            builder.Entity<User>().Property(p => p.Password).IsRequired().HasMaxLength(10);
+            
+
             //Popular Categories
             builder.Entity<Category>().HasData
             (
@@ -47,7 +56,11 @@ namespace Dws.Note_one.Api.Persistence.Context
                 new Product {Id = 3, Name = "Onion", QuantityInPackage = 20, UnitOfMeasurement = EUnitOfMeasurement.Kilogram, CategoryId = 100}
             );
 
-            
+            //Popular Users
+            builder.Entity<User>().HasData
+            (
+                new User {Id = 100, Login = "vini", Password = "12345"}                
+            );
         }
     }
 }

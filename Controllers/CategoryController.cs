@@ -6,12 +6,14 @@ using Dws.Note_one.Api.Resource;
 using Dws.Note_one.Api.Services.IServices;
 using Dws.Note_one.Api.Resource;
 using Dws.Note_one.Api.Extension;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace Dws.Note_one.Api.Controllers
 {
     [Route("/api/[controller]")]
     [ApiController]
+    [Authorize()]
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
