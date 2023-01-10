@@ -26,7 +26,33 @@ namespace Dws.Note_one.Api.Services
         {
             return await _productRepository.ListByCategoryIdAsync(categoryId);
         }
+        public async Task<ProductResponse> FindByIdAsync(int id)
+        {
+            var existingProduct = await _productRepository.FindByIdAsync(id);
 
+            if (existingProduct == null)
+            {
+                return new ProductResponse("Product not found.");
+            }
+            else 
+            {
+                return new ProductResponse(existingProduct);
+            }
+        }
+        public async Task<ProductResponse> FindByNameAsync(string name)
+        {
+            var existingProduct = await _productRepository.FindByNameAsync(name);
+
+            if (existingProduct == null)
+            {
+                return new ProductResponse("Product not found.");
+            }
+            else 
+            {
+                return new ProductResponse(existingProduct);
+            }
+            
+        }
         public async Task<ProductResponse> SaveAsync(Product product)
         {
             try

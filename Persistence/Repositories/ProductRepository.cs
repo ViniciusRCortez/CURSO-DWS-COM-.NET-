@@ -33,6 +33,12 @@ namespace Dws.Note_one.Api.Persistence.Repositories
             return await _context.Products.FindAsync(id);
         }
 
+        public async Task<Product> FindByNameAsync(string name)
+        {
+            return await _context.Products
+                    .FirstOrDefaultAsync(x => x.Name == name);
+        }
+
         public void Update(Product Product)
         {
             _context.Products.Update(Product);

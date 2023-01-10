@@ -7,6 +7,8 @@ namespace Dws.Note_one.Api.Services.IServices
     {
         Task<IEnumerable<Product>> ListAsync();
         Task<IEnumerable<Product>> ListByCategoryIdAsync(int categoryId);
+        Task<ProductResponse> FindByIdAsync(int id);
+        Task<ProductResponse> FindByNameAsync(string name);
         Task<ProductResponse> SaveAsync(Product product);
 
         Task<ProductResponse> UpdateAsync(int id, Product product);

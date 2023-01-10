@@ -34,7 +34,37 @@ namespace Dws.Note_one.Api.Controllers
             return resources;
         }
 
-        [HttpGet("{categoryId}")]
+        [HttpGet("{id}")]
+        public async Task<IActionResult>GetByIdAsync(int id)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+
+            var productResponse = await _productService.FindByIdAsync(id);
+            var resource = _mapper.Map<Product,ProductResource>(productResponse.Product);
+
+             if (!productResponse.Success)
+                return BadRequest(productResponse.Message);
+
+            return Ok(resource);
+        }
+
+        [HttpGet("name/{name}")]
+        public async Task<IActionResult>  GetByNameAsync(string name)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+
+            var productResponse = await _productService.FindByNameAsync(name);
+            var resource = _mapper.Map<Product,ProductResource>(productResponse.Product);
+
+            if (!productResponse.Success)
+                return BadRequest(productResponse.Message);
+
+            return Ok(resource);
+        }
+
+        [HttpGet("categoryid/{categoryId}")]
         public async Task<IEnumerable<ProductResource>> GetByCategoryIdAsync(int categoryId)
         {
             var products = await _productService.ListByCategoryIdAsync(categoryId);
