@@ -17,3 +17,7 @@ Além de atualizar para a versão atualizada algumas funcionalidades já existen
 - Criada a entidade Customer para servir de base de dados sobre as informações dos clientes de algum empreendimento que consumir nossa API
 - Gerado um CRUD básico para Customers, através do CustomersController e seus dependências de Service, Repository e etc.
 - Além dos endpoints para buscar(Get) em todos os Customers e endpoints para requisições básicas de um CRUD, foi implementado endpoints para requisições de busca(Get) das informações de um Customer alvo através do Id, do Name e uma filtragem com base em Credit positivo ou negativo. 
+
+
+## Testes Feitos:
+Os teste feitos para nossa API foram utilizando o software Postman, onde nele foram feitas as requisições para cada um dos endpoints e programados alguns testes automatizados para verificar a funcionalidade da API, através do Postman, foram exportas os json com a coleção de teste(Collection) e os resultados dos testes(TestRun), além de dois prints de tela evidenciando que a API foi submetida a 60 testes e passou por todos.
