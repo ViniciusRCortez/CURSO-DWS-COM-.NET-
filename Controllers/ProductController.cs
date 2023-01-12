@@ -35,7 +35,7 @@ namespace Dws.Note_one.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult>GetByIdAsync(int id)
+        public async Task<IActionResult> GetByIdAsync(int id)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());

@@ -37,6 +37,7 @@ internal class Program
 
         builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
         builder.Services.AddScoped<ICategoryService, CategoryService>();
+        
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         builder.Services.AddScoped<IProductRepository, ProductRepository>();
@@ -44,6 +45,9 @@ internal class Program
 
         builder.Services.AddScoped<IUserRepository, UserRepository>();
         builder.Services.AddScoped<IUserService, UserService>();
+
+        builder.Services.AddScoped<ICostumerRepository, CostumerRepository>();
+        builder.Services.AddScoped<ICostumerService, CostumerService>();
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();

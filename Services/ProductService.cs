@@ -78,6 +78,9 @@ namespace Dws.Note_one.Api.Services
                 return new ProductResponse("Product not found.");
 
             existingProduct.Name = product.Name;
+            existingProduct.QuantityInPackage = product.QuantityInPackage;
+            existingProduct.UnitOfMeasurement= product.UnitOfMeasurement;
+            existingProduct.CategoryId = product.CategoryId;
 
             try
             {
