@@ -12,6 +12,7 @@ namespace Dws.Note_one.Api.Extension
             CreateMap<SaveCategoryResource, Category>();
             CreateMap<SaveProductResource, Product>();
             CreateMap<AuthUserResource, User>();
+            CreateMap<SaveCostumerResource, Costumer>();
         }
     }
 

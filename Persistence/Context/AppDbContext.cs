@@ -12,6 +12,7 @@ namespace Dws.Note_one.Api.Persistence.Context
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Costumer> Costumers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -40,6 +41,14 @@ namespace Dws.Note_one.Api.Persistence.Context
             builder.Entity<User>().Property(p => p.Login).IsRequired().HasMaxLength(50);
             builder.Entity<User>().Property(p => p.Password).IsRequired().HasMaxLength(10);
             
+            //Tabela Costumers
+            builder.Entity<Costumer>().ToTable("Costumers");
+            builder.Entity<Costumer>().HasKey(p => p.Id);
+            builder.Entity<Costumer>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Costumer>().Property(p => p.Name).IsRequired().HasMaxLength(50);
+            builder.Entity<Costumer>().Property(p => p.Email).IsRequired().HasMaxLength(50);
+            builder.Entity<Costumer>().Property(p => p.PhoneNumber).IsRequired().HasMaxLength(20);
+            builder.Entity<Costumer>().Property(p => p.Credit).IsRequired();
 
             //Popular Categories
             builder.Entity<Category>().HasData
@@ -60,6 +69,15 @@ namespace Dws.Note_one.Api.Persistence.Context
             builder.Entity<User>().HasData
             (
                 new User {Id = 100, Login = "vini", Password = "12345"}                
+            );
+
+            //Popular Costumers
+            builder.Entity<Costumer>().HasData
+            (
+                new Costumer {Id = 1, Name = "Vinicius Cortêz", Email = "viniciusfake@gmail.com", PhoneNumber = "+55 (85) 11111-1111", Credit = -10.50},
+                new Costumer {Id = 2, Name = "Bruce Wayne", Email = "iamnotbatman@gmail.com", PhoneNumber = "+55 (85) 22222-2222", Credit = 1984},
+                new Costumer {Id = 3, Name = "Antony Stark", Email = "iamironman@gmail.com", PhoneNumber = "+55 (85) 33333-3333", Credit = 451},
+                new Costumer {Id = 4, Name = "Peter Parker", Email = "iamnotmiranha@gmail.com", PhoneNumber = "+21 (44) 44444-4444", Credit = -200.89}                
             );
         }
     }
