@@ -1,0 +1,778 @@
+{
+	"id": "011f7877-edc0-4aa9-9028-1773b57b0a79",
+	"name": "Curso DWS",
+	"timestamp": "2023-01-12T18:40:26.311Z",
+	"collection_id": "23724216-62351b08-3b97-45b3-808f-8bd6f7fb9d95",
+	"folder_id": 0,
+	"environment_id": "23724216-91abb7a2-5fda-4d90-9852-b778c00d3f5a",
+	"totalPass": 60,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "29e65126-c3a5-4c8c-bcf8-786f73775e3a",
+			"name": "Pegar Todas as Categorias",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				13,
+				6,
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2e476a8d-d28a-4fba-b7a3-87f6bdd867ee",
+			"name": "Criar Nova Categoria",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				17,
+				12,
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "677e40ec-806b-46a1-8fe3-7c931bbf70a4",
+			"name": "Alterar Categoria Alvo",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				9,
+				11,
+				13
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "78d530de-1fe8-4e4d-8103-cd91a96df238",
+			"name": "Apagar Categoria Alvo",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				11,
+				10,
+				11
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "78af45df-1135-49dd-bb89-f3be903b66a7",
+			"name": "Pegar Todas os Produtos",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				4,
+				5,
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "6f44e72d-0107-4bbd-b58b-24d0319d994c",
+			"name": "Pegar Produto Pelo Id",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				6,
+				5,
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "cb590de4-c8b7-413b-a12b-7bb559f7bc30",
+			"name": "Pegar Produto pelo Nome",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				5,
+				6,
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "c7d01896-bd9a-4540-b27c-231d76038551",
+			"name": "Pegar os Produtos Pelo Id da Categoria",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				5,
+				6,
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "bef1dace-7304-4acf-8655-580a0d487371",
+			"name": "Criar Novo Produto",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				11,
+				9,
+				11
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "51173934-dd60-48bd-ac01-060e8165d04c",
+			"name": "Alterar Produto Alvo",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				11,
+				13,
+				12
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "05a94075-6c8b-4016-bfb8-d02cbb403a57",
+			"name": "Apagar Produto Alvo",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				11,
+				11,
+				15
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "4f82453f-2cf5-4252-8ff5-f306c377adc3",
+			"name": "Pegar Todas os Costumers",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				4,
+				9,
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "878ad5c3-64e5-40b2-b2d1-cf8ce4674de6",
+			"name": "Pegar Costumer Pelo Id",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				6,
+				9,
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "39ebe804-a8e2-4cda-85fd-ec22186bd85a",
+			"name": "Pegar Customer Pelo Nome",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				5,
+				8,
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "4f840cef-b43d-437f-850b-704db550941c",
+			"name": "Pegar Costumers Com Credito Positivo",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				6,
+				8,
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "70d6230c-480f-4691-a706-02722ee55b4f",
+			"name": "Pegar Customers Com Credito Negativo",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				4,
+				6,
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "08f0e121-b9c5-481c-98c1-530c5cc4b362",
+			"name": "Criar Novo Customer",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				9,
+				12,
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "11732ec9-010b-4992-b2ab-d326d48db934",
+			"name": "Alterar Customer Alvo",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				13,
+				10,
+				13
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "0d07ee66-0693-4f5e-bc2a-9e1e86c48b28",
+			"name": "Apagar Customer Alvo",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				14,
+				12,
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "c121bed9-76fc-4f9d-8362-433ac5a20dc5",
+			"name": "LoginAuthentication",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				7,
+				4,
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 3,
+	"totalTime": 515,
+	"collection": {
+		"requests": [
+			{
+				"id": "29e65126-c3a5-4c8c-bcf8-786f73775e3a",
+				"method": "GET"
+			},
+			{
+				"id": "2e476a8d-d28a-4fba-b7a3-87f6bdd867ee",
+				"method": "POST"
+			},
+			{
+				"id": "677e40ec-806b-46a1-8fe3-7c931bbf70a4",
+				"method": "PUT"
+			},
+			{
+				"id": "78d530de-1fe8-4e4d-8103-cd91a96df238",
+				"method": "DELETE"
+			},
+			{
+				"id": "78af45df-1135-49dd-bb89-f3be903b66a7",
+				"method": "GET"
+			},
+			{
+				"id": "6f44e72d-0107-4bbd-b58b-24d0319d994c",
+				"method": "GET"
+			},
+			{
+				"id": "cb590de4-c8b7-413b-a12b-7bb559f7bc30",
+				"method": "GET"
+			},
+			{
+				"id": "c7d01896-bd9a-4540-b27c-231d76038551",
+				"method": "GET"
+			},
+			{
+				"id": "bef1dace-7304-4acf-8655-580a0d487371",
+				"method": "POST"
+			},
+			{
+				"id": "51173934-dd60-48bd-ac01-060e8165d04c",
+				"method": "PUT"
+			},
+			{
+				"id": "05a94075-6c8b-4016-bfb8-d02cbb403a57",
+				"method": "DELETE"
+			},
+			{
+				"id": "4f82453f-2cf5-4252-8ff5-f306c377adc3",
+				"method": "GET"
+			},
+			{
+				"id": "878ad5c3-64e5-40b2-b2d1-cf8ce4674de6",
+				"method": "GET"
+			},
+			{
+				"id": "39ebe804-a8e2-4cda-85fd-ec22186bd85a",
+				"method": "GET"
+			},
+			{
+				"id": "4f840cef-b43d-437f-850b-704db550941c",
+				"method": "GET"
+			},
+			{
+				"id": "70d6230c-480f-4691-a706-02722ee55b4f",
+				"method": "GET"
+			},
+			{
+				"id": "08f0e121-b9c5-481c-98c1-530c5cc4b362",
+				"method": "POST"
+			},
+			{
+				"id": "11732ec9-010b-4992-b2ab-d326d48db934",
+				"method": "PUT"
+			},
+			{
+				"id": "0d07ee66-0693-4f5e-bc2a-9e1e86c48b28",
+				"method": "DELETE"
+			},
+			{
+				"id": "c121bed9-76fc-4f9d-8362-433ac5a20dc5",
+				"method": "POST"
+			}
+		]
+	}
+}
